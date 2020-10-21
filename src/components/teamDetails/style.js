@@ -27,10 +27,21 @@ export const Additional = styles.div`
     justify-content: space-between;
     margin-top: 1rem;
     align-items: center;
+    text-align: right;
+
+    @media (max-width: 850px) {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+
+        & > * {
+            margin-bottom: 1rem;
+        }
+        
+    }
 `;
 
 export const AdditionalBlock = styles.div`
-    text-align: right;
     
     & h1 {
         font-size: 1.2rem;

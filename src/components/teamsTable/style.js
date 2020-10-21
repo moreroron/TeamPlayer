@@ -1,5 +1,5 @@
 import styles from 'styled-components';
-import {colors} from '../../styles/global';
+import { colors, Table } from '../../styles/global';
 
 export const Headline = styles.div`
     background-color: ${colors.blue};
@@ -9,4 +9,10 @@ export const Headline = styles.div`
     font-weight: 600;
     line-height: 3rem;
     font-size: 1.2rem;
+`;
+
+export const AllTeamsTable = styles(Table)`
+    @media (max-width: 850px) {
+        margin-top: 1rem;
+    }
 `;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Headline } from './style';
-import { Table } from '../../styles/global';
+import { AllTeamsTable } from './style';
 import useFetchTeams from '../../hooks/useFetchTeams';
 import Spinner from '../shared/spinner/Spinner';
 
@@ -22,7 +22,7 @@ const TeamsTable = () => {
   return (
     <div>
       <Headline>ליגת האלופות</Headline>
-      <Table>
+      <AllTeamsTable>
         <thead>
           <tr>
             <th>כתובת</th>
@@ -40,7 +40,7 @@ const TeamsTable = () => {
               </tr>
             ))}
         </tbody>
-      </Table>
+      </AllTeamsTable>
     </div>
   );
 };

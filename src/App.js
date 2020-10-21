@@ -15,6 +15,10 @@ const Container = styled.div`
 const PageContainer = styled.div`
   margin: 0 auto;
   padding: 0 15%;
+
+  @media (max-width: 850px) {
+    padding: 0 1.5rem;
+  }
 `;
 
 function App() {
