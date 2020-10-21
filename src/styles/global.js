@@ -1,17 +1,17 @@
 import styles from 'styled-components';
 
 export const colors = {
-    white: '#FFFFFF',
-    dark: '#413A61',
-    grey: '#F4F6FA',
-    blue: '#9CB7EC',
-    blue_light: '#C2CFEA',
-    blue_lighter: '#F9FBFE',
-    blue_hover: '#E6EEFA'
+  white: '#FFFFFF',
+  dark: '#413A61',
+  grey: '#F4F6FA',
+  blue: '#9CB7EC',
+  blue_light: '#C2CFEA',
+  blue_lighter: '#F9FBFE',
+  blue_hover: '#E6EEFA',
 };
 
 export const shadows = {
-    main: '0px 0px 2px 1px rgba(0, 0, 0, 0.07)'
+  main: '0px 0px 2px 1px rgba(0, 0, 0, 0.07)',
 };
 
 export const Table = styles.table`
@@ -60,4 +60,4 @@ export const Button = styles.button`
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-`
+`;

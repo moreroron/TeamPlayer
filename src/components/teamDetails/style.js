@@ -1,5 +1,5 @@
 import styles from 'styled-components';
-import {Button, Table, colors} from '../../styles/global';
+import { Button, Table, colors } from '../../styles/global';
 
 export const TeamInfo = styles.div`
     margin-top: 2rem;
@@ -14,6 +14,11 @@ export const Title = styles.div`
     & p {
         font-size: 1.5rem;
         font-weight: 600;
+    }
+
+    & img {
+        width: 4rem;
+        height: 4rem;
     }
 `;
 
