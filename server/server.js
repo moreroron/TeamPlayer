@@ -1,9 +1,17 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const publicPath = path.join(__dirname, '..', 'build');
+const publicPath = path.join(__dirname, '..', 'public');
 const port = process.env.PORT || 3000;
+const cors = require('cors');
 
+const corsOptions = {
+  origin: 'https://api.football-data.org',
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors());
 app.use(express.static(publicPath));
 
 app.get('*', (req, res) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { Headline } from './style';
-import { AllTeamsTable } from './style';
+import { Headline, AllTeamsTable } from './style';
+import { Error } from '../../styles/global';
 import useFetchTeams from '../../hooks/useFetchTeams';
 import Spinner from '../shared/spinner/Spinner';
 
@@ -16,7 +16,14 @@ const TeamsTable = () => {
     history.push(`teams/${teamId}`);
   };
 
-  if (error) return <div>{error}</div>;
+  if (error)
+    return (
+      <Error>
+        <b>Too many requests!</b>
+        <br />
+        Please try again in 2 minutes.
+      </Error>
+    );
   if (!teams) return <Spinner />;
 
   return (

@@ -8,11 +8,16 @@ const useFetchTeams = (url) => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const { data } = await axios.get(url, { headers: { 'X-Auth-Token': '3c9c206578d141ae8483bd451daa819e' } });
+        const { data } = await axios.get(url, {
+          headers: {
+            'X-Auth-Token': '83dbbf606d274eb085fa5569a0b436d1',
+          },
+        });
+
         setData(data);
       } catch (err) {
-        console.log(err);
-        setError(err);
+        console.log(err.message);
+        setError(err.message);
       }
     };
 

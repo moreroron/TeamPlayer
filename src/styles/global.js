@@ -8,6 +8,7 @@ export const colors = {
   blue_light: '#C2CFEA',
   blue_lighter: '#F9FBFE',
   blue_hover: '#E6EEFA',
+  red: '#d43737',
 };
 
 export const shadows = {
@@ -60,4 +61,17 @@ export const Button = styles.button`
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+`;
+
+export const Error = styles.div`
+    background-color: ${colors.red};
+    border-radius: 1rem;
+    padding: 2rem;
+    color: white;
+    text-align: center;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 `;
