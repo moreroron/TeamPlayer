@@ -69,9 +69,13 @@ export const Error = styles.div`
     padding: 2rem;
     color: white;
     text-align: center;
-
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    & p {
+        margin: 0;
+        font-weight: 800;
+    }
 `;

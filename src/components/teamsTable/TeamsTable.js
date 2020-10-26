@@ -19,8 +19,7 @@ const TeamsTable = () => {
   if (error)
     return (
       <Error>
-        <b>Too many requests!</b>
-        <br />
+        <p>Too many requests!</p>
         Please try again in 2 minutes.
       </Error>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Additional, AdditionalBlock, TeamInfo, Title, LinkButton, PlayersTable } from './style';
+import { Error } from '../../styles/global';
 import useFetchTeams from '../../hooks/useFetchTeams';
 import Spinner from '../shared/spinner/Spinner';
 
@@ -9,7 +10,13 @@ const TeamDetails = () => {
 
   const { data, error } = useFetchTeams(`https://api.football-data.org/v2/teams/${teamId}`);
 
-  if (error) return <div>{error}</div>;
+  if (error)
+    return (
+      <Error>
+        <p>Too many requests!</p>
+        Please try again in 2 minutes.
+      </Error>
+    );
   if (!data.squad) return <Spinner />;
 
   return (
