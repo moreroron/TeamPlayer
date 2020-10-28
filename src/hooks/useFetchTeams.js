@@ -10,7 +10,7 @@ const useFetchTeams = (url) => {
       try {
         const { data } = await axios.get(url, {
           headers: {
-            'X-Auth-Token': '83dbbf606d274eb085fa5569a0b436d1',
+            'X-Auth-Token': '3c9c206578d141ae8483bd451daa819e',
           },
         });
 
