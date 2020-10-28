@@ -9,7 +9,7 @@ const TeamsTable = () => {
   const {
     data: { teams },
     error,
-  } = useFetchTeams('https://api.football-data.org/v2/competitions/2001/teams');
+  } = useFetchTeams('http://localhost:3001/teams');
 
   const history = useHistory();
   const handleRowClick = (teamId) => {
