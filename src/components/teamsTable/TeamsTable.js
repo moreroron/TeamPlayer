@@ -9,7 +9,7 @@ const TeamsTable = () => {
   const {
     data: { teams },
     error,
-  } = useFetchTeams('http://localhost:3001/teams');
+  } = useFetchTeams('http://localhost:3001/api/teams');
 
   const history = useHistory();
   const handleRowClick = (teamId) => {

@@ -8,7 +8,7 @@ import Spinner from '../shared/spinner/Spinner';
 const TeamDetails = () => {
   const { teamId } = useParams();
 
-  const { data, error } = useFetchTeams(`http://localhost:3001/teams/${teamId}`);
+  const { data, error } = useFetchTeams(`http://localhost:3001/api/teams/${teamId}`);
 
   if (error) return <Error>{error}</Error>;
   if (!data.squad) return <Spinner />;

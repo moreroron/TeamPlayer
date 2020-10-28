@@ -10,10 +10,11 @@ const teamsRoutes = require('./routes/teamsRoutes');
 // middlewares
 app.use(cors());
 app.use(express.static(buildPath));
-app.use('/teams', teamsRoutes);
+
+app.use('/api/teams', teamsRoutes);
 
 // requests
-app.get((req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(buildPath, 'index.html'));
 });
 
