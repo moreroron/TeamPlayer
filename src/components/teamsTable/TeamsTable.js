@@ -16,13 +16,7 @@ const TeamsTable = () => {
     history.push(`teams/${teamId}`);
   };
 
-  if (error)
-    return (
-      <Error>
-        <p>Too many requests!</p>
-        Please try again in 2 minutes.
-      </Error>
-    );
+  if (error) return <Error>{error}</Error>;
   if (!teams) return <Spinner />;
 
   return (

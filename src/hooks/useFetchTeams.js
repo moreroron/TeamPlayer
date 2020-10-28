@@ -11,8 +11,11 @@ const useFetchTeams = (url) => {
         const { data } = await axios.get(url);
         setData(data);
       } catch (err) {
-        console.log(err);
-        // setError(err);
+        if (err.response) {
+          setError(err.response?.data);
+        } else {
+          setError('Somthing went wrong with the server...');
+        }
       }
     };
 
