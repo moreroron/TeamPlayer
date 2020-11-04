@@ -14,4 +14,4 @@ TeamPlayer is a web app which contains information about the Champions League te
 
 1. navigate to the root folder
 2. run `npm install` to install all project dependencies.
-3. run `npm run dev` to run both react and node.
+3. run `npm run dev` to run both the client (react) and the server (node).
