@@ -6,11 +6,11 @@ const fetchFromApi = async (url, token) => {
     const { data } = await axios.get(url, { headers: { 'X-Auth-Token': token } });
     return { ...res, data };
   } catch (error) {
-    const { status, data } = error.response;
-    if (status === 429) {
+    if (error.response) {
+      const { status, data } = error.response;
       return { ...res, error: { status, message: data.message } };
     } else {
-      return { ...res, error: { status, message: data.error } };
+      return { ...res, error: { status: 500, message: 'No response from API server' } };
     }
   }
 };

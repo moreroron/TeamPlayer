@@ -12,9 +12,9 @@ const useFetchTeams = (url) => {
         setData(data);
       } catch (err) {
         if (err.response) {
-          setError(err.response?.data);
+          setError(err.response.data);
         } else {
-          setError('Somthing went wrong with the server...');
+          setError('No response from TeamPlayer server');
         }
       }
     };

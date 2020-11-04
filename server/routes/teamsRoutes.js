@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   const { data, error } = await fetchFromApi(`${baseURL}/competitions/2001/teams`, token);
   if (data) {
     res.json(data);
-  } else if (error) {
+  } else {
     res.status(error.status).json(error.message);
   }
 });
@@ -17,7 +17,7 @@ router.get('/:teamId', async (req, res) => {
   const { data, error } = await fetchFromApi(`${baseURL}/teams/${req.params.teamId}`, token);
   if (data) {
     res.json(data);
-  } else if (error) {
+  } else {
     res.status(error.status).json(error.message);
   }
 });

@@ -21,8 +21,8 @@
     "start": "node server/server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build",
     "app": "react-scripts start",
-    "server": "node server/server.js",
-    "dev": "concurrently \"npm run server\" \"npm start\"",
+    "server": "nodemon server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run app\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
