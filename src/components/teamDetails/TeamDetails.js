@@ -8,15 +8,9 @@ import Spinner from '../shared/spinner/Spinner';
 const TeamDetails = () => {
   const { teamId } = useParams();
 
-  const { data, error } = useFetchTeams(`https://api.football-data.org/v2/teams/${teamId}`);
+  const { data, error } = useFetchTeams(`http://localhost:3001/api/teams/${teamId}`);
 
-  if (error)
-    return (
-      <Error>
-        <p>Too many requests!</p>
-        Please try again in 2 minutes.
-      </Error>
-    );
+  if (error) return <Error>{error}</Error>;
   if (!data.squad) return <Spinner />;
 
   return (

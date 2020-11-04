@@ -8,16 +8,14 @@ const useFetchTeams = (url) => {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const { data } = await axios.get(url, {
-          headers: {
-            'X-Auth-Token': '83dbbf606d274eb085fa5569a0b436d1',
-          },
-        });
-
+        const { data } = await axios.get(url);
         setData(data);
       } catch (err) {
-        console.log(err.message);
-        setError(err.message);
+        if (err.response) {
+          setError(err.response.data);
+        } else {
+          setError('No response from TeamPlayer server');
+        }
       }
     };
 
