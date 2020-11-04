@@ -1,3 +1,5 @@
+![alt text](https://raw.githubusercontent.com/moreroron/TeamPlayer/a21bbda61138e62d22c93cc598de820c01189676/cover.svg)
+
 TeamPlayer brings you all the knowledge you need for UEFA Champions League ⚽
 
 ## Technologies
