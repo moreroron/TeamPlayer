@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const baseURL = 'https://api.football-data.org/v2';
-const token = '3c9c206578d141ae8483bd451daa819e'; // on a real app needs to be in a config file
+const token = '3c9c206578d141ae8483bd451daa819e'; // a testing token
 const { fetchFromApi } = require('../utiles');
 
 router.get('/', async (req, res) => {
